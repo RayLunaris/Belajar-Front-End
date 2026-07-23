@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <!-- 4. Meta viewport untuk tampilan responsif -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penerapan Best Practices HTML</title>
+</head>
+<body>
+
+    <!-- 1. Elemen Semantik: <header> dan <nav> -->
+    <header>
+        <!-- 3. Heading Berurutan: <h1> untuk judul utama halaman -->
+        <h1>Website Pembelajaran HTML</h1>
+        
+        <nav aria-label="Navigasi Utama">
+            <ul>
+                <li><a href="#beranda">Beranda</a></li>
+                <li><a href="#artikel">Artikel</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 1. Elemen Semantik: <main> untuk konten utama halaman -->
+    <main>
+        
+        <!-- Section Artikel -->
+        <section id="artikel">
+            <!-- 3. Heading Berurutan: <h2> di bawah <h1> -->
+            <h2>Artikel Terbaru</h2>
+            
+            <article>
+                <!-- 3. Heading Berurutan: <h3> di bawah <h2> -->
+                <h3>Panduan Belajar HTML untuk Pemula</h3>
+                <p>HTML adalah bahasa markup standar untuk membuat struktur halaman web yang rapi dan terstruktur.</p>
+                
+                <!-- 2. Selalu sertakan atribut alt pada gambar -->
+                <img src="../Image/chisa-wuthering-5120x2880-24840.jpg" alt="Ilustrasi gambar artikel pembelajaran web" width="400" height="250">
+            </article>
+        </section>
+
+        <!-- Section Form Kontak -->
+        <section id="kontak">
+            <h2>Hubungi Kami</h2>
+            
+            <!-- 5. Validasi form dengan atribut HTML5 & 7. HTML yang valid -->
+            <form action="#" method="POST">
+                <p>
+                    <!-- 6. Gunakan label untuk setiap input (dengan atribut 'for' yang cocok dengan 'id') -->
+                    <label for="nama">Nama Lengkap:</label>
+                    <input type="text" id="nama" name="nama" required minlength="3" maxlength="50" placeholder="Masukkan nama Anda">
+                </p>
+
+                <p>
+                    <!-- 6. Label & 5. Validasi email -->
+                    <label for="email">Alamat Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="contoh@email.com">
+                </p>
+
+                <p>
+                    <!-- 6. Label & 5. Validasi textarea -->
+                    <label for="pesan">Pesan:</label>
+                    <textarea id="pesan" name="pesan" rows="4" required minlength="10" placeholder="Tuliskan pesan Anda (minimal 10 karakter)..."></textarea>
+                </p>
+
+                <button type="submit">Kirim Pesan</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- 1. Elemen Semantik: <footer> untuk bagian kaki halaman -->
+    <footer>
+        <p>&copy; 2026 Belajar Front End. Seluruh hak cipta dilindungi.</p>
+    </footer>
+
+</body>
+</html>
