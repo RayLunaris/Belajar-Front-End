@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Media Queries</title>
+    <style>
+        .container {
+            padding: 20px;
+            background: #f1f5f9;
+        }
+
+        @supports (display: grid) {
+            .container {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 10px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .container { background: #fee2e2; }
+        }
+
+        @media (min-width: 641px) and (max-width: 1024px) {
+            .container { background: #e0f2fe; }
+        }
+
+        @media (min-width: 1025px) {
+            .container { background: #dcfce7; }
+        }
+
+        @media (orientation: landscape) {
+            body { border-top: 5px solid #2563eb; }
+        }
+
+        @media (orientation: portrait) {
+            body { border-top: 5px solid #16a34a; }
+        }
+
+        @media (hover: hover) {
+            .btn:hover { background: #1d4ed8; color: white; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * { animation-duration: 0.01ms !important; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Advanced Media Queries</h1>
+    <div class="container">
+        <button class="btn">Hover Me</button>
+    </div>
+
+</body>
+</html>

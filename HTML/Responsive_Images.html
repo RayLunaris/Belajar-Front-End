@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Images</title>
+</head>
+<body style="padding: 20px;">
+
+    <h1>Responsive Images</h1>
+
+    <img srcset="small.jpg 480w, medium.jpg 800w, large.jpg 1200w"
+         sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+         src="medium.jpg" alt="Responsive Image" style="width: 100%; height: auto;">
+
+    <picture>
+        <source media="(max-width: 600px)" srcset="small.jpg">
+        <source media="(max-width: 1024px)" srcset="medium.jpg">
+        <img src="large.jpg" alt="Responsive Picture" style="width: 100%; height: auto;">
+    </picture>
+
+    <img src="large.jpg" loading="lazy" alt="Lazy Load" style="width: 100%; height: auto;">
+
+</body>
+</html>

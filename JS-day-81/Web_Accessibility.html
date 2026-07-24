@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Accessibility</title>
+    <style>
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+        }
+
+        .focus\:not-sr-only:focus {
+            position: static;
+            width: auto;
+            height: auto;
+            padding: 8px;
+            background: yellow;
+        }
+
+        *:focus-visible {
+            outline: 2px solid #6C63FF;
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body style="padding: 20px;">
+
+    <a href="#main" class="sr-only focus:not-sr-only">Skip to Main Content</a>
+
+    <nav aria-label="Main Navigation">
+        <button tabindex="0" role="button">Home</button>
+        <button tabindex="0" role="button">About</button>
+    </nav>
+
+    <main id="main" style="margin-top: 20px;">
+        <h1>Web Accessibility (WCAG)</h1>
+        <p>Halaman ini dapat diakses menggunakan navigasi keyboard (Tab) dan screen reader.</p>
+    </main>
+
+</body>
+</html>

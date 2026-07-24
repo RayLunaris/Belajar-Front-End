@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS Intro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6 min-h-screen">
+
+    <div class="max-w-4xl mx-auto space-y-6">
+        <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Judul Component</h2>
+            <p class="text-gray-600 leading-relaxed mb-4">Konten contoh menggunakan utility classes Tailwind CSS.</p>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">
+                Klik Saya
+            </button>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="bg-white p-4 rounded-lg shadow">Grid Item 1</div>
+            <div class="bg-white p-4 rounded-lg shadow">Grid Item 2</div>
+            <div class="bg-white p-4 rounded-lg shadow">Grid Item 3</div>
+        </div>
+
+        <div class="bg-white dark:bg-gray-800 text-black dark:text-white p-6 rounded-xl shadow">
+            Dark Mode Ready Container
+        </div>
+    </div>
+
+</body>
+</html>
